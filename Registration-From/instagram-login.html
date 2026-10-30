@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Instagram Login Page Demo</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="instagram-page">
+  <main class="instagram-demo">
+    <section class="instagram-promo">
+      <div class="ig-logo" aria-label="Instagram-style camera logo">
+        <span></span>
+      </div>
+
+      <h1>See everyday moments from<br>
+        your <span class="close-friends">close friends.</span>
+      </h1>
+
+      <div class="story-art" aria-hidden="true">
+        <div class="story-card story-back">
+          <div class="story-top"><i></i><i></i><i></i></div>
+          <div class="story-sun"></div>
+          <div class="story-land"></div>
+        </div>
+        <div class="story-card story-middle">
+          <div class="story-top"><i></i><i></i><i></i></div>
+          <div class="story-person person-one"></div>
+          <div class="story-caption">best moments ✨</div>
+        </div>
+        <div class="story-card story-front">
+          <div class="story-top"><i></i><i></i><i></i></div>
+          <div class="story-person person-two"></div>
+          <div class="story-caption">friends forever ♥</div>
+        </div>
+        <span class="story-heart">♥</span>
+        <span class="story-like">♥</span>
+      </div>
+    </section>
+
+    <section class="instagram-login-panel">
+      <div class="ig-login-content">
+        <h2>Log into Instagram</h2>
+
+        <form class="ig-demo-form">
+          <label class="sr-only" for="ig-username">Mobile number, username or email</label>
+          <input id="ig-username" type="text"
+            placeholder="Mobile number, username or email"
+            autocomplete="off">
+
+          <label class="sr-only" for="ig-password">Password</label>
+          <input id="ig-password" type="password"
+            placeholder="Password" autocomplete="off">
+
+          <button type="button" class="ig-login-button">Log in</button>
+        </form>
+
+        <a class="ig-forgot" href="#" onclick="return false;">Forgot password?</a>
+
+        <div class="ig-divider"><span></span><b>OR</b><span></span></div>
+
+        <a class="ig-facebook" href="#" onclick="return false;">
+          <span class="facebook-mark">f</span> Log in with Facebook
+        </a>
+
+        <a class="ig-create-account" href="#" onclick="return false;">Create new account</a>
+
+        <p class="ig-demo-note">Demo design only — do not enter real Instagram credentials.</p>
+      </div>
+    </section>
+  </main>
+</body>
+</html>

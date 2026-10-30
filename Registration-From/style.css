@@ -1,0 +1,389 @@
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:Arial,sans-serif;min-height:100vh;padding:30px 15px;color:#252525}
+h1,h2{text-align:center;margin-bottom:16px}p{line-height:1.5;margin-bottom:15px}
+label{display:block;font-size:14px;font-weight:600;margin:10px 0 6px}
+input:not([type=radio]):not([type=checkbox]),select,textarea{display:block;width:100%;padding:12px;margin:6px 0 14px;border:1px solid #ccc;border-radius:6px;background:#fff;font-size:14px}
+input[type=radio],input[type=checkbox]{margin-right:7px}
+button{width:100%;padding:12px;border:0;border-radius:7px;color:white;font-size:15px;font-weight:bold;cursor:pointer}
+.card{width:100%;max-width:650px;margin:25px auto;padding:32px;background:#fff;border-radius:14px;box-shadow:0 10px 30px #0002}
+.simple-page{background:linear-gradient(135deg,#667eea,#764ba2)}.simple-card{max-width:430px}.simple-card h1{color:#5b45a5}.simple-card button{background:#667eea}
+.student-page{background:linear-gradient(135deg,#11998e,#38ef7d)}.student-card{border-top:7px solid #11998e}.student-card h1,.student-card h2{color:#07836f}.student-card button{background:#11998e}
+.company-page{background:linear-gradient(135deg,#8e2de2,#4a00e0)}.company-card{max-width:500px}.company-card h1{color:#7929c8}.company-card button{background:#7929c8}
+.login-page{background:linear-gradient(135deg,#00b09b,#96c93d)}.split-card{max-width:850px;padding:0;display:grid;grid-template-columns:1fr 1.2fr;overflow:hidden}.welcome-panel{padding:45px 25px;background:linear-gradient(135deg,#00b09b,#007f78);color:white;display:flex;flex-direction:column;justify-content:center;text-align:center}.welcome-panel h1,.welcome-panel p{color:white}.register-panel{padding:35px 25px}.register-panel h2{color:#008f83}.register-panel button{background:#00a58f}
+.detailed-page{background:linear-gradient(135deg,#ffecd2,#fcb69f)}.detailed-card{border-top:7px solid #e67e22}.detailed-card h1,.detailed-card h2{color:#d35400}.detailed-card h2{text-align:left;margin-top:24px;border-bottom:2px solid #f5cba7;padding-bottom:8px}.detailed-card button{background:#e67e22}
+.instagram-page{background:#fafafa;display:flex;justify-content:center;align-items:center;padding:25px 15px}.instagram-card{max-width:350px;margin:auto;padding:35px 40px;border:1px solid #dbdbdb;border-radius:3px;box-shadow:none;text-align:center}.instagram-card h1{font-family:cursive;font-size:40px;color:#c13584;margin-bottom:28px}.instagram-card p{color:#737373;font-size:14px}.instagram-card input:not([type=checkbox]){background:#fafafa;border:1px solid #dbdbdb;border-radius:3px;font-size:12px}.instagram-card button{background:#0095f6;margin-top:10px}.instagram-card a{color:#385185;text-decoration:none;font-size:13px}.signup-box{margin-top:24px;padding-top:20px;border-top:1px solid #dbdbdb;font-size:14px}.signup-box a{color:#0095f6!important;font-weight:bold}.demo-note{margin-top:18px;color:#999;font-size:11px}
+.home-page{background:linear-gradient(135deg,#eef2ff,#fce7f3);padding:40px 16px}.home-card{max-width:760px;margin:20px auto;background:white;padding:35px;border-radius:16px;box-shadow:0 10px 30px #0001}.home-card h1{color:#463a91}.form-links{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}.form-links a{padding:16px;background:#f3f4ff;border-radius:9px;color:#453b91;text-decoration:none;font-weight:bold;text-align:center}
+@media(max-width:650px){body{padding:15px 10px}.card{padding:23px 17px}.split-card{display:block}.welcome-panel{padding:30px 20px}.register-panel{padding:25px 18px}.form-links{grid-template-columns:1fr}}
+
+
+
+/* ==========================================
+   INSTAGRAM REFERENCE-SCREEN DESIGN
+   Overrides the earlier Instagram styles
+========================================== */
+
+body.instagram-page {
+    min-height: 100vh;
+    padding: 35px 20px;
+    background: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #f5f5f5;
+}
+
+.instagram-demo {
+    width: 100%;
+    max-width: 1040px;
+    min-height: 620px;
+    display: grid;
+    grid-template-columns: 1.12fr 0.88fr;
+    background: #101719;
+    border: 1px solid #26343a;
+    overflow: hidden;
+    box-shadow: 0 15px 45px rgba(0,0,0,.16);
+}
+
+.instagram-promo {
+    position: relative;
+    min-height: 620px;
+    padding: 34px 35px;
+    background: #0c1113;
+    border-right: 1px solid #34444b;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.ig-logo {
+    align-self: flex-start;
+    width: 48px;
+    height: 48px;
+    border: 4px solid transparent;
+    border-radius: 15px;
+    background:
+      linear-gradient(#0c1113,#0c1113) padding-box,
+      linear-gradient(40deg,#ffb13b,#ff4b69,#c42caa,#7657e8) border-box;
+    position: relative;
+    margin-bottom: 18px;
+}
+
+.ig-logo:before {
+    content: "";
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border: 4px solid #ed4a87;
+    border-radius: 50%;
+    left: 10px;
+    top: 10px;
+}
+
+.ig-logo:after {
+    content: "";
+    position: absolute;
+    width: 6px;
+    height: 6px;
+    background: #ff9a42;
+    border-radius: 50%;
+    right: 7px;
+    top: 7px;
+}
+
+.instagram-promo h1 {
+    color: #f5f5f5;
+    font-size: clamp(23px, 3vw, 34px);
+    font-weight: 500;
+    line-height: 1.55;
+    text-align: center;
+    margin: 0;
+}
+
+.close-friends {
+    background: linear-gradient(90deg,#ff6b35,#ff1688);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    font-weight: 600;
+}
+
+.story-art {
+    position: relative;
+    width: 310px;
+    height: 260px;
+    margin-top: 36px;
+}
+
+.story-card {
+    position: absolute;
+    bottom: 8px;
+    width: 142px;
+    height: 205px;
+    border: 5px solid #f3d9a4;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 12px 25px #0008;
+}
+
+.story-back {
+    left: 28px;
+    bottom: 23px;
+    transform: rotate(-12deg);
+    background: linear-gradient(155deg,#f7d6a0 0 35%,#5a9a9c 36% 62%,#e9b77c 63%);
+}
+
+.story-middle {
+    left: 88px;
+    z-index: 2;
+    transform: rotate(2deg);
+    background: linear-gradient(160deg,#f6d8a7,#b6d7d0 52%,#e1a56e);
+}
+
+.story-front {
+    right: 20px;
+    bottom: 18px;
+    transform: rotate(12deg);
+    background: linear-gradient(145deg,#83c7d8,#f2c58c 52%,#75a66b);
+}
+
+.story-top {
+    height: 18px;
+    display: flex;
+    gap: 4px;
+    padding: 5px;
+    background: #ffffff88;
+}
+
+.story-top i {
+    height: 3px;
+    flex: 1;
+    background: #ffffff;
+    border-radius: 5px;
+}
+
+.story-person {
+    position: absolute;
+    width: 75px;
+    height: 95px;
+    left: 30px;
+    top: 50px;
+    border-radius: 45% 45% 20% 20%;
+    background: linear-gradient(145deg,#f3c39a 0 40%,#7a4437 41% 100%);
+    box-shadow: 0 0 0 8px #ffffff33;
+}
+
+.person-two {
+    background: linear-gradient(145deg,#b87550 0 40%,#283c50 41% 100%);
+    transform: rotate(-8deg);
+}
+
+.story-caption {
+    position: absolute;
+    bottom: 12px;
+    left: 5px;
+    right: 5px;
+    color: #fff;
+    font-size: 11px;
+    font-weight: bold;
+    text-align: center;
+    text-shadow: 0 1px 4px #333;
+}
+
+.story-sun {
+    position: absolute;
+    width: 45px;
+    height: 45px;
+    background: #fff2c6;
+    border-radius: 50%;
+    top: 38px;
+    right: 25px;
+}
+
+.story-land {
+    position: absolute;
+    left: -10px;
+    right: -10px;
+    bottom: 0;
+    height: 70px;
+    background: #438b70;
+    border-radius: 50% 50% 0 0;
+}
+
+.story-heart,.story-like {
+    position: absolute;
+    z-index: 4;
+    font-size: 28px;
+    color: #ff2e65;
+    text-shadow: 0 3px 8px #0008;
+}
+
+.story-heart { left: 5px; bottom: 65px; }
+.story-like { right: 0; top: 85px; color: #23d58a; }
+
+.instagram-login-panel {
+    background: #152128;
+    min-height: 620px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 35px;
+}
+
+.ig-login-content {
+    width: 100%;
+    max-width: 370px;
+    text-align: center;
+}
+
+.ig-login-content h2 {
+    color: #f5f5f5;
+    text-align: left;
+    font-size: 18px;
+    font-weight: 500;
+    margin-bottom: 24px;
+}
+
+.ig-demo-form input {
+    width: 100%;
+    height: 52px;
+    margin: 0 0 10px;
+    padding: 0 13px;
+    color: #f5f5f5;
+    background: #17252d;
+    border: 1px solid #40515b;
+    border-radius: 13px;
+    font-size: 13px;
+}
+
+.ig-demo-form input::placeholder {
+    color: #aab5bc;
+}
+
+.ig-demo-form input:focus {
+    outline: none;
+    border-color: #8b9ba5;
+}
+
+.ig-demo-form .ig-login-button {
+    height: 48px;
+    margin-top: 8px;
+    background: #2465b9;
+    border-radius: 25px;
+    color: white;
+    font-size: 14px;
+    opacity: 1;
+}
+
+.ig-demo-form .ig-login-button:hover {
+    background: #3479d0;
+}
+
+.ig-forgot {
+    display: inline-block;
+    margin: 20px 0 30px;
+    color: #d7dfe3;
+    text-decoration: none;
+    font-size: 13px;
+}
+
+.ig-divider {
+    display: flex;
+    align-items: center;
+    gap: 13px;
+    margin: 0 0 24px;
+    color: #9eabb2;
+    font-size: 12px;
+}
+
+.ig-divider span {
+    height: 1px;
+    flex: 1;
+    background: #34444d;
+}
+
+.ig-facebook,.ig-create-account {
+    display: block;
+    width: 100%;
+    padding: 13px;
+    margin-top: 12px;
+    border: 1px solid #40515b;
+    border-radius: 13px;
+    color: #e9eef1;
+    text-decoration: none;
+    font-size: 13px;
+}
+
+.facebook-mark {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 16px;
+    height: 16px;
+    margin-right: 7px;
+    border-radius: 50%;
+    background: #1685e8;
+    color: white;
+    font-weight: bold;
+    font-family: Arial,sans-serif;
+}
+
+.ig-create-account {
+    border-color: #2877c9;
+    color: #58aaff;
+    margin-top: 12px;
+}
+
+.ig-demo-note {
+    margin-top: 22px;
+    color: #82919a;
+    font-size: 10px;
+    line-height: 1.5;
+}
+
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0,0,0,0);
+    white-space: nowrap;
+    border: 0;
+}
+
+@media (max-width: 760px) {
+    body.instagram-page {
+        padding: 12px;
+        align-items: flex-start;
+    }
+
+    .instagram-demo {
+        max-width: 430px;
+        grid-template-columns: 1fr;
+    }
+
+    .instagram-promo {
+        min-height: 390px;
+        padding: 24px 18px;
+        border-right: 0;
+        border-bottom: 1px solid #34444b;
+    }
+
+    .instagram-promo h1 {
+        font-size: 23px;
+    }
+
+    .story-art {
+        transform: scale(.78);
+        transform-origin: top center;
+        margin-top: 18px;
+        margin-bottom: -45px;
+    }
+
+    .instagram-login-panel {
+        min-height: auto;
+        padding: 35px 22px;
+    }
+}
+
