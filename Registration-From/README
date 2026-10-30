@@ -1,0 +1,13 @@
+# Registration Form 
+- Six different form designs with unique layouts and colors.
+- Separate HTML files for each form.
+- **One common CSS file (`style.css`) used to style all forms.**
+
+
+### Technologies Used
+- HTML5
+- CSS3
+
+### How to Run
+Open `index.html` in your browser using Live Server in VS Code.
+
